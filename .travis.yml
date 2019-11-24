@@ -8,11 +8,10 @@ compiler:
 
 before_install:
     - sudo apt-get install liblua5.3-dev lua5.3
-    - sudo updatedb
-    - sudo locate lua.h
 
 script:
     - mkdir build
     - cd build
     - cmake ..
+    - cat CMakeCache.txt
     - make
